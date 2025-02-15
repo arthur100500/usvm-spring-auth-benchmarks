@@ -1,0 +1,33 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: API
+servers:
+  - url: http://localhost:8080
+paths:
+  /login:
+    post:
+      tags:
+        - user
+      operationId: login
+      description: login
+      requestBody:
+        description: loginRequest
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'    
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Void'    
+components:
+  schemas:
+    Void:
+      type: object
+    LoginRequest:
+      type: object
