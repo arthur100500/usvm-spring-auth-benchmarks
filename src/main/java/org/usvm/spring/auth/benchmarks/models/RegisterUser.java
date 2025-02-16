@@ -6,9 +6,9 @@ import jakarta.validation.constraints.Size;
 public class RegisterUser {
     @Size(min = 6, max = 300, message = "UserName must be above 5 characters")
     @NotNull(message = "Username cannot be null")
-    private String username;
+    public String username;
 
-    private String pwd;
+    public String pwd;
 
-    private String role;
+    public String role;
 }
